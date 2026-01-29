@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Gutiérrez: Content & Visual Narrative</title>
+
+    <!-- Tailwind config must be set BEFORE loading the CDN so the CDN reads it -->
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        background: '#F9F8F6', // Warm off-white
+                        ink: '#121212',        // Soft black
+                        stone: '#666666',      // Secondary text
+                        accent: '#D4C4B5',     // Sand accent
+                        softred: '#E57373',    // For Standard Price
+                        softgreen: '#81C784'   // For Preferred Price
+                    },
+                    letterSpacing: {
+                        widest: '.25em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F9F8F6;
+            color: #121212;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Smooth Image Loading */
+        img {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Play Button Overlay Effect */
+        .play-overlay {
+            background: rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover .play-overlay {
+            background: rgba(0,0,0,0.3);
+        }
+
+        .play-icon {
+            transform: scale(1);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .video-card:hover .play-icon {
+            transform: scale(1.2);
+        }
+
+        /* Editorial List Styling */
+        ul.editorial-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.editorial-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #9CA3AF;
+        }
+    </style>
+</head>
+<body class="font-sans font-light text-ink selection:bg-black selection:text-white">
+
+    <header class="min-h-screen flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 p-10 md:p-20 flex flex-col justify-center border-r border-gray-200 order-2 md:order-1">
+            <span class="text-xs font-bold tracking-[0.3em] uppercase text-stone mb-6">Creative Proposal</span>
+
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[0.9] mb-8 text-ink">
+                Grace<br>
+                Gutiérrez<br>
+                <span class="italic font-light text-4xl md:text-5xl text-stone block mt-2">Content & Visual Narrative</span>
+            </h1>
+
+            <div class="w-12 h-0.5 bg-black mb-8"></div>
+
+            <p class="text-xl font-serif italic text-ink mb-2">
+                Design, Process & Place
+            </p>
+            <p class="text-sm tracking-widest uppercase text-stone">
+                Visual Documentation of a Destination Wedding in Bogotá
+            </p>
+
+            <div class="mt-12 max-w-md text-stone text-sm leading-relaxed">
+                <p class="mb-4">
+                    A visual documentation project focused on design, logistics, and process, capturing how a destination wedding comes to life in Bogotá through space, architecture, and execution.
+                </p>
+                <p>
+                    This project is designed to create both high-end editorial content and a long-term visual archive for your brand as a wedding planner.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 h-[50vh] md:h-auto relative overflow-hidden bg-gray-200 order-1 md:order-2">
+            <!-- hero.jpg should be in same folder as this index.html -->
+            <img src="hero.jpg"
+                 alt="Architectural Mood"
+                 class="absolute inset-0 w-full h-full object-cover opacity-95 grayscale hover:grayscale-0 transition-all duration-1000 ease-out">
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-24">
+
+        <section class="mb-24 flex flex-col md:flex-row gap-12 items-baseline border-b border-gray-100 pb-20">
+            <div class="w-full md:w-1/3">
+                <h2 class="font-serif text-3xl italic text-ink">Project Understanding</h2>
+            </div>
+            <div class="w-full md:w-2/3">
+                <p class="text-lg md:text-xl font-serif text-ink mb-8 leading-relaxed">
+                    This collaboration is centered on documenting the behind-the-scenes reality of a destination wedding in Bogotá, with a clear emphasis on:
+                </p>
+                <ul class="editorial-list text-sm md:text-base text-stone mb-8 space-y-2">
+                    <li>Design execution and spatial transformation</li>
+                    <li>Backend logistics and coordination</li>
+                    <li>The creative process behind the event</li>
+                    <li>Architectural and city elements that connect the project to Bogotá</li>
+                </ul>
+                <p class="text-sm md:text-base text-stone leading-relaxed">
+                    The focus is intentionally not on guests or the couple, but on how the space, design, and planning come together — aligning with your background in architecture and your position as a planner.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-24 flex flex-col md:flex-row gap-12 items-baseline border-b border-gray-100 pb-20">
+            <div class="w-full md:w-1/3">
+                <h2 class="font-serif text-3xl italic text-ink">Event Coverage Scope</h2>
+            </div>
+            <div class="w-full md:w-2/3">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                     <div>
+                        <p class="font-bold text-xs tracking-widest uppercase mb-3 text-ink">February 12, 2026</p>
+                        <h3 class="font-serif text-xl mb-4 italic text-stone">Bogotá Archive</h3>
+                        <ul class="editorial-list text-sm text-stone leading-relaxed">
+                            <li>Dedicated city & architecture capture day</li>
+                            <li>Locations curated jointly with client</li>
+                            <li>Long-term brand archive and contextual storytelling</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xs tracking-widest uppercase mb-3 text-ink">February 13, 2026</p>
+                        <h3 class="font-serif text-xl mb-4 italic text-stone">Event Setup & Preview</h3>
+                        <ul class="editorial-list text-sm text-stone leading-relaxed">
+                            <li>Full documentation of event setup at the Metropolitan Club</li>
+                            <li>Capture of backend logistics and build-up process</li>
+                            <li>Recording of a preview video</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-bold text-xs tracking-widest uppercase mb-3 text-ink">February 14, 2026</p>
+                        <h3 class="font-serif text-xl mb-4 italic text-stone">Event Day</h3>
+                        <ul class="editorial-list text-sm text-stone leading-relaxed">
+                            <li>Morning setup, cocktail hour, and reception</li>
+                            <li>Spatial atmosphere, details, lighting, and textures</li>
+                            <li>Venue restrictions respected (no drone usage)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="font-serif text-3xl italic text-ink mb-12 border-b border-black pb-4 inline-block">Content Deliverables</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-bold text-stone block mb-4">01</span>
+                    <h4 class="font-serif text-2xl text-ink mb-4">Aesthetic / Editorial Films</h4>
+                    <p class="text-xs font-bold uppercase tracking-widest text-stone mb-4">3 Videos</p>
+                    <ul class="editorial-list text-sm text-stone mb-6">
+                        <li>Setup & Build-Up Film</li>
+                        <li>Event Atmosphere Film</li>
+                        <li>Design & Details Film</li>
+                    </ul>
+                    <div class="pt-4 border-t border-gray-100 text-xs text-stone">
+                        <p><strong>Duration:</strong> 30–60 seconds each</p>
+                        <p><strong>Style:</strong> Editorial, cinematic, texture-driven</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-bold text-stone block mb-4">02</span>
+                    <h4 class="font-serif text-2xl text-ink mb-4">Authority / Storytelling Films</h4>
+                    <p class="text-xs font-bold uppercase tracking-widest text-stone mb-4">2 Videos</p>
+                    <ul class="editorial-list text-sm text-stone mb-6">
+                        <li>Authority Film — Planning & Logistics</li>
+                        <li>Authority Film — Design Concept & Inspiration</li>
+                    </ul>
+                    <div class="pt-4 border-t border-gray-100 text-xs text-stone">
+                        <p><strong>Duration:</strong> 60–90 seconds each</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-bold text-stone block mb-4">03</span>
+                    <h4 class="font-serif text-2xl text-ink mb-4">Preview Video</h4>
+                    <p class="text-xs font-bold uppercase tracking-widest text-stone mb-4">1 Video</p>
+                    <div class="text-sm text-stone space-y-2">
+                        <p>Recorded on February 13</p>
+                        <p>30–60 seconds duration</p>
+                        <p>Designed for same-day or next-day publishing</p>
+                        <p class="italic text-xs mt-2">Introduces the project, location, and creative direction</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="grid md:grid-cols-2 gap-8 mb-8">
+                 <div class="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xs font-bold text-stone block mb-4">04</span>
+                    <h4 class="font-serif text-xl text-ink mb-3">Live Instagram Stories Support</h4>
+                    <p class="text-sm text-stone leading-relaxed mb-4">
+                        Short-form story clips captured throughout the day, behind-the-scenes moments, and brief testimonials or commentary. 
+                    </p>
+                     <p class="text-xs text-stone italic">Purpose: Keep the audience engaged in real time. (Content capture support only).</p>
+                </div>
+                 <div class="bg-gray-50 border border-gray-100 p-8 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-serif text-xl text-ink mb-2">Additional Courtesy Deliverable</h4>
+                        <p class="text-sm text-stone">
+                            1 additional horizontal video (15–30s) intended for website use. Created from archival or project footage. Designed as a clean, timeless introduction piece.
+                        </p>
+                    </div>
+                    <div class="mt-4">
+                        <span class="px-3 py-1 bg-white border border-gray-200 text-[10px] font-bold uppercase tracking-widest text-stone">Value Added</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto border-b border-gray-100 pb-20 mb-32">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-5/12">
+                    <span class="text-xs font-bold tracking-widest uppercase text-accent mb-4 block">Visual Reference</span>
+                    <h2 class="font-serif text-3xl italic text-ink mb-4">Complimentary Website Video</h2>
+                    <p class="text-sm text-stone leading-relaxed mb-6">
+                        This visual example illustrates how the horizontal asset (referenced in deliverables above) can function as a high-end homepage hero.
+                    </p>
+                    <p class="text-sm text-stone leading-relaxed">
+                        It serves as a silent, brand-aligned introduction to your digital presence.
+                    </p>
+                </div>
+                <div class="w-full md:w-7/12">
+                    <div class="aspect-video w-full relative overflow-hidden border border-gray-200 bg-black">
+                      <iframe 
+                        src="https://player.vimeo.com/video/920764165?autoplay=0&muted=1&loop=1&title=0&byline=0&portrait=0" 
+                        class="absolute inset-0 w-full h-full" 
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; picture-in-picture" 
+                        allowfullscreen 
+                        title="Website Header Video — Example">
+                      </iframe>
+
+                      <span class="absolute top-4 right-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-ink z-10">
+                        Website Header Asset — Visual Example
+                      </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-end justify-between mb-12 border-b border-gray-200 pb-4">
+                <div class="max-w-xl">
+                    <h2 class="font-serif text-3xl italic text-ink mb-4">Visual & Narrative References</h2>
+                    <p class="text-sm text-stone">The following references illustrate the intended visual language, rhythm, and narrative approach. Click cards to view references.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+
+                <a href="https://www.instagram.com/reels/C4W8h6IN6lF/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="architecture-editorial-01.jpg" alt="Architecture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Architectural Editorial</p>
+                        <p class="text-[10px] text-white/80 mt-2">City & Space</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/reels/C6xGBmpL98V/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="architecture-rhythm-02.jpg" alt="Rhythm" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Rhythm & Pacing</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/reels/DOwNDovgQUf/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="event-editorial-03.jpg" alt="Editorial" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Editorial Coverage</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/reels/DTf1TA7jtQ5/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="design-spatial-04.jpg" alt="Texture" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Design & Interaction</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/reels/DTYkVjCjr7e/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="authority-process-05.jpg" alt="BTS" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Authority & Process</p>
+                        <p class="text-[10px] text-white/80 mt-2">Behind the Scenes</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/reels/DRch78ukoai/" target="_blank" class="group video-card relative aspect-[4/5] overflow-hidden cursor-pointer block bg-gray-100">
+                    <img src="compilation-editorial-06.jpg" alt="Compilation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="play-overlay absolute inset-0 flex flex-col justify-center items-center text-white p-6">
+                        <div class="play-icon w-12 h-12 rounded-full border border-white flex items-center justify-center backdrop-blur-sm mb-4">
+                            <svg class="w-4 h-4 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <p class="text-xs font-bold tracking-widest uppercase text-center">Compilation</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="mb-32 grid md:grid-cols-2 gap-12 border-t border-gray-200 pt-20">
+            <div>
+                <h3 class="font-serif text-2xl italic text-ink mb-6">Media Archive & Strategy</h3>
+                <div class="text-sm text-stone space-y-4 leading-relaxed mb-8">
+                    <p>You will receive a structured and organized video archive including event footage, architectural and city footage, and color-corrected files.</p>
+                    <p>This archive is designed for reuse by your internal team or external editors across future projects.</p>
+                    <p>As part of this project, we include a concise creative framework designed specifically for destination wedding planners, outlining how to brief videographers across different contexts.</p>
+                </div>
+
+                <div class="pt-6 border-t border-gray-200">
+                    <h4 class="font-serif text-lg text-ink mb-3">Instagram Growth & Visibility Strategy <span class="text-xs font-sans text-stone font-normal">(Optional)</span></h4>
+                    <ul class="editorial-list text-sm text-stone">
+                        <li>Guidance on leveraging produced content for Instagram growth</li>
+                        <li>Support includes configuration and setup of Meta Ads account (verification if needed)</li>
+                        <li>Optional setup of simple "Follow Me" campaigns focused on NY/US market</li>
+                        <li><strong>Important:</strong> Client retains full ownership and access. Role is limited to advisory and setup support; no ongoing campaign management.</li>
+                    </ul>
+                </div>
+
+                <p class="text-xs italic opacity-70 mt-4">Note: Ongoing editing or design services are not included and can be discussed separately if needed.</p>
+            </div>
+            <div>
+                <h3 class="font-serif text-2xl italic text-ink mb-6">Production Standards</h3>
+                <ul class="editorial-list text-sm text-stone">
+                    <li>Sony cinema-grade cameras</li>
+                    <li>Stabilization systems (gimbals)</li>
+                    <li>High-fidelity Audio & Professional Microphones</li>
+                    <li>Discreet, non-intrusive lighting</li>
+                    <li>iPhone Pro for social capture</li>
+                    <li>Professional color correction and grading</li>
+                </ul>
+
+                <h3 class="font-serif text-2xl italic text-ink mt-10 mb-4">Timeline & Delivery</h3>
+                <ul class="editorial-list text-sm text-stone">
+                    <li><strong>Feb 13 Recap Video:</strong> Delivered by February 14 (Midday)</li>
+                    <li><strong>Preview Video:</strong> within 48–72 hours</li>
+                    <li><strong>Final edited videos:</strong> 7–14 days after the event</li>
+                    <li><strong>Full media archive:</strong> delivered alongside final edits</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="max-w-2xl mx-auto border-t border-b border-gray-200 py-20 mb-20">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-4xl italic text-ink mb-2">Investment</h2>
+            </div>
+
+            <div class="flex flex-col items-center justify-center space-y-8">
+
+                <div class="text-center group">
+                    <p class="text-xs font-bold tracking-widest uppercase text-stone mb-2">Standard Project Value</p>
+                    <p class="text-6xl font-serif text-softred line-through decoration-softred/50 decoration-2 transition-transform group-hover:scale-105">$3,000</p>
+                    <p class="text-xs text-softred/60 uppercase tracking-wide mt-1">USD</p>
+                </div>
+
+                <div class="w-12 h-px bg-gray-300"></div>
+
+                <div class="text-center group">
+                    <p class="text-xs font-bold tracking-widest uppercase text-stone mb-2">Preferred Collaboration Rate</p>
+                    <p class="text-4xl font-serif text-softgreen">$2,500</p>
+                    <p class="text-xs text-softgreen/60 uppercase tracking-wide mt-1">USD</p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-dashed border-gray-200 text-center">
+                <p class="text-xs text-stone tracking-wide uppercase">Booking: $500 USD upfront • Balance due prior to event</p>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 mb-32 border-b border-gray-100 pb-20">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl italic text-ink mb-4">Payment Terms & Methods</h2>
+                <p class="text-sm text-stone max-w-2xl mx-auto">To ensure clarity, production continuity, and proper resource allocation, the following payment structure applies.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-serif text-xl text-ink mb-3">Booking & Date Reservation</h4>
+                        <p class="text-sm text-stone leading-relaxed mb-2">
+                            A non-refundable booking fee of <strong>USD 500</strong> is required upon proposal acceptance.
+                        </p>
+                        <p class="text-sm text-stone leading-relaxed">
+                            This payment secures the production dates, team availability, and pre-production planning. The booking fee is applied toward the total project value.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-xl text-ink mb-3">Pre-Production Payment</h4>
+                        <p class="text-sm text-stone leading-relaxed mb-2">
+                            <strong>30% of the remaining balance</strong> is due no later than 5 days prior to the start of production.
+                        </p>
+                        <p class="text-sm text-stone leading-relaxed">
+                            This covers creative planning, coordination, scheduling, and logistical preparation.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-serif text-xl text-ink mb-3">Post-Event / First Delivery Payment</h4>
+                        <p class="text-sm text-stone leading-relaxed mb-2">
+                            The remaining balance is due upon delivery of the first round of content following the event.
+                        </p>
+                        <p class="text-sm text-stone leading-relaxed">
+                            This ensures timely post-production flow and delivery of all agreed materials.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between">
+                    <div class="bg-white p-8 border border-gray-100 shadow-sm mb-8">
+                        <h4 class="font-serif text-xl text-ink mb-4">Payment Method</h4>
+                        <p class="text-sm text-stone leading-relaxed mb-4">
+                            All payments are processed via <strong>Stripe</strong> through secure payment links. This ensures a secure, simple, and internationally accessible payment process.
+                        </p>
+                        <ul class="editorial-list text-sm text-stone">
+                            <li><strong>Booking Fee:</strong> Stripe payment link will be provided upon acceptance</li>
+                            <li><strong>Remaining payments:</strong> Separate Stripe links will be issued according to the payment schedule</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 border border-gray-100">
+                        <p class="text-xs text-stone leading-relaxed italic">
+                            "This structure avoids extended post-event payment timelines while guaranteeing full delivery of all agreed assets, archive, and strategic documentation."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-24 text-center bg-white border-t border-gray-100">
+            <h2 class="font-serif text-2xl italic text-ink mb-6">Closing</h2>
+            <p class="max-w-lg mx-auto text-stone mb-10 leading-relaxed text-sm md:text-base">
+                This project is designed to document not only an event, but the thinking, design, and execution behind it, while positioning Bogotá as part of your creative narrative.
+            </p>
+            <p class="font-serif text-xl text-ink">
+                We would be happy to collaborate and bring this vision to life.
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>
